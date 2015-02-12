@@ -1,6 +1,5 @@
 package com.redhat.demo.medicalDemo;
 
-import java.util.ArrayList;
 import java.util.Random;
  
 public class DummyDataGenerator {
@@ -12,24 +11,10 @@ public class DummyDataGenerator {
 		
 		medSet = new MedicalDataSet(	String.valueOf( System.nanoTime() ), 
 										Integer.toString(random.nextInt(4)), 
+										Integer.toString(random.nextInt(10)),
 										Integer.toString(random.nextInt(1000)));	
 	}
 	
-	
-public ArrayList<String> getMedicalDataSetArray(){
-		
-		ArrayList<String> data = new ArrayList<String>();
-		
-		genRandomData();
-		
-		data.add( medSet.getTimestamp() );
-		data.add( medSet.getDeviceID() );
-		data.add( medSet.getPayload() );
-
-		return data;
-	}
-	
-
 	public MedicalDataSet getMedicalDataSet(){
 		
 		genRandomData();

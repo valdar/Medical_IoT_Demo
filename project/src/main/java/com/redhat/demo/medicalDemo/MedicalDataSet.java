@@ -1,14 +1,29 @@
 package com.redhat.demo.medicalDemo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "medicalDataSet")
+@XmlType(propOrder = { "timestamp", "deviceID", "patientID", "payload" })
 public class MedicalDataSet {
 	private String	timestamp;
 	private String	deviceID;
+	private String	patientID;	
 	private	String	payload;
 	
-	public MedicalDataSet(String time, String devID, String pay)
+	public MedicalDataSet()
+	{
+		this.timestamp 	= "";
+		this.deviceID 	= "";
+		this.patientID	= "";
+		this.payload	= "";
+	}
+	
+	public MedicalDataSet(String time, String devID, String patID, String pay)
 	{
 		this.timestamp 	= time;
 		this.deviceID 	= devID;
+		this.patientID	= patID;
 		this.payload	= pay;
 	}
 	
@@ -52,5 +67,19 @@ public class MedicalDataSet {
 	 */
 	public void setPayload(String payload) {
 		this.payload = payload;
+	}
+
+	/**
+	 * @return the patientID
+	 */
+	public String getPatientID() {
+		return patientID;
+	}
+
+	/**
+	 * @param patientID the patientID to set
+	 */
+	public void setPatientID(String patientID) {
+		this.patientID = patientID;
 	}
 }
