@@ -14,7 +14,8 @@
       <feature version="5.9.0.redhat-610379">activemq-camel</feature>
       <feature version="6.1.0.redhat-379">mq-fabric</feature>
       <feature version="[2.12,3)">camel-sql</feature>
- 
+
+      <bundle>mvn:commons-dbcp/commons-dbcp/1.4</bundle>
  	  <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.postgresql/9.3-1102-jdbc41_1</bundle>
       <bundle>mvn:com.redhat.demo/medicalDemo/1.0.0</bundle>
   </feature>
